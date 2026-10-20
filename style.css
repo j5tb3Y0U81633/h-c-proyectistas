@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F4F5F6;
+    color: #263238;
+    font-size: 20px;
+}
+
+header {
+    background-color: #D97706;
+    color: white;
+    padding: 35px;
+    text-align: center;
+}
+
+header h1 {
+    color: white;
+}
+
+
+.descripcion {
+    font-size: 18px;
+    color: white;
+    line-height: 1.5;
+}
+
+/* flexbox */
+nav {
+    background-color: #37474F;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+}
+
+nav a:hover {
+    color: #FFB700;
+}
+
+main {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 20px;
+    padding: 10px;
+}
+
+section {
+    background-color: #FFFFFF;
+    margin: 20px auto;
+    padding: 40px;
+    width: 100%;
+    max-width: 1100px;
+    border-radius: 8px;
+}
+
+h1, h2 {
+    color: #263238;
+}
+
+h2 {
+    border-left: 5px solid #E67E22;
+    padding-left: 12px;
+}
+
+.boton {
+    display: inline-block;
+    background-color: #E67E22;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton:hover {
+    background-color: #CF6D17;
+}
+
+body > img {
+    display: block;
+    width: 300px;
+    max-width: 90%;
+    height: auto;
+    margin: 20px auto;
+}
+
+footer {
+    background-color: #37474F;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 15px;
+}
+
+/* accesibilidad para tablets */
+@media (max-width: 900px) {
+    section {
+        padding: 30px;
+    }
+    nav {
+        gap: 10px;
+    }
+}
+
+/* accesibilidad para celulares */
+@media (max-width: 600px) {
+    body {
+        font-size: 16px;
+    }
+    header {
+        padding: 25px 15px;
+    }
+    header h1 {
+        font-size: 28px;
+    }
+    nav {
+        flex-direction: column;
+        gap: 8px;
+    }
+    nav a {
+        padding: 8px;
+    }
+    section {
+        padding: 20px;
+        margin: 10px auto;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    .boton {
+        padding: 12px 18px;
+    }
+    footer {
+        padding: 15px;
+    }
+}
